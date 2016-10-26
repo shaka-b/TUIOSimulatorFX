@@ -1,0 +1,40 @@
+
+.touch-point-visualizer {
+ -fx-background-color:  derive(#2c2f34,-63%);
+ -fx-background-radius: 6px;
+}
+
+
+
+.touch-data-grid {
+ -fx-font-size: 0.833333em;
+}
+
+.touch-point-text-label {
+  -fx-text-fill: #728CA7;
+  -fx-font-size: 0.85em;
+}
+
+
+.touch-point-counter-label {
+  -fx-text-fill: #23A25D;
+    -fx-font-weight: bold;
+}
+
+.table-column {
+  -fx-text-alignment: left;
+}
+
+/*TODO doesn't work*/
+.table-column-event .table-cell{
+  -fx-font-weight: bold;
+}
+
+.gesture-data-table .table-cell {
+ -fx-font-size: 0.68em;
+}
+
+
+.gesture-filter > .label {
+ -fx-font-size: 0.85em;
+}

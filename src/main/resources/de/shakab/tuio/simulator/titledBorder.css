@@ -1,0 +1,22 @@
+
+.bordered-titled-title {
+  -fx-background-color: -fx-background;
+  -fx-translate-y: -14;
+  -fx-translate-x: 16;
+  -fx-font-size: 17px;
+  -fx-text-fill: #b1b4be;
+  -fx-padding: 0 15 0;
+}
+
+.bordered-titled-border {
+  -fx-content-display: top;
+  -fx-border-color: #3c3d43;
+  -fx-border-insets: 0;
+  -fx-border-width: 1;
+  -fx-border-radius: 4;
+}
+
+.bordered-titled-content {
+  /*   -fx-padding: 20 10 20;*/
+  -fx-padding: 25 15 25;
+}

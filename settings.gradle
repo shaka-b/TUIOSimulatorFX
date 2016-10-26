@@ -1,0 +1,5 @@
+rootProject.name = 'tuiosimulator'
+
+//include 'tuiomd'
+//project(':tuiomd').projectDir = new File(settingsDir, '../tuiomd')
+

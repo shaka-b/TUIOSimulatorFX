@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import de.shakab.tuio.simulator.TitledBorder?>
+<?import de.shakab.tuio.simulator.TitledBorderContent?>
+<VBox spacing="40.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TitledBorder minHeight="-Infinity" minWidth="-Infinity" title="Gesture Filter" VBox.vgrow="NEVER">
+            <children>
+                <TitledBorderContent styleClass="gesture-filter">
+                    <children>
+                        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="gesture-filter">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="90.0" />
+                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Touch Recognizer" />
+                                <CheckBox fx:id="touchRecognizerEnabled" mnemonicParsing="false" selected="true" GridPane.columnIndex="1" />
+
+                                <Label text="Zoom Gesture Recognizer" GridPane.rowIndex="4" />
+                                <CheckBox fx:id="scrollRecognizerEnabled" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                <Label text="Rotate Gesture Recognizer" GridPane.rowIndex="3" />
+                                <CheckBox fx:id="rotateRecognizerEnabled" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                                <Label text="Mouse Recognizer" GridPane.rowIndex="1" />
+                                <CheckBox fx:id="mouseRecognizerEnabled" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                <Label text="Scroll Gesture Recognizer" GridPane.rowIndex="2" />
+                                <CheckBox fx:id="zoomRecognizerEnabled" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                                <Label text="Swipe Gesture Recognizer" GridPane.rowIndex="5" />
+                                <CheckBox fx:id="swipeRecognizerEnabled" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                                <Label layoutX="10.0" layoutY="167.0" text="Hide Continuation State" GridPane.rowIndex="6" />
+                                <CheckBox fx:id="gestureContinuationState" layoutX="675.0" layoutY="167.0" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </TitledBorderContent>
+            </children>
+        </TitledBorder>
+        <TitledBorder alignment="TOP_LEFT" minHeight="-Infinity" minWidth="-Infinity" title="Getsure Data" VBox.vgrow="ALWAYS">
+            <children>
+                <TitledBorderContent>
+                    <children>
+                        <VBox layoutX="-1.0" layoutY="-1.0" maxHeight="1.7976931348623157E308" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <TableView fx:id="gestureDataTable" maxHeight="1.7976931348623157E308" styleClass="gesture-data-table" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="eventColumn" maxWidth="-1.0" minWidth="150.0" prefWidth="150.0" sortable="false" styleClass="table-column,table-column-event" text="Event" />
+                                        <TableColumn maxWidth="65.0" prefWidth="65.0" resizable="true" sortable="false" text="x" fx:id="xColumn" />
+                                        <TableColumn fx:id="yColumn" prefWidth="65.0" resizable="true" sortable="false" text="x" />
+                                        <TableColumn fx:id="dxColumn" prefWidth="50.0" resizable="true" sortable="false" text="dx" />
+                                        <TableColumn fx:id="dyColumn" prefWidth="50.0" resizable="true" sortable="false" text="dy" />
+                                        <TableColumn fx:id="scaleColumn" maxWidth="1.7976931348623157E308" minWidth="55.0" prefWidth="55.0" resizable="true" sortable="false" text="Scale" />
+                                        <TableColumn fx:id="angleColumn" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="60.0" resizable="true" sortable="false" text="Angle" />
+                                        <TableColumn fx:id="inertiaColumn" maxWidth="1.7976931348623157E308" minWidth="64.0" prefWidth="64.0" resizable="false" sortable="false" text="Inertia" />
+                                        <TableColumn fx:id="swipeTouchesColumn" maxWidth="1.7976931348623157E308" minWidth="75.0" prefWidth="75.0" resizable="false" sortable="false" text="SWCount" />
+                                        <TableColumn fx:id="targetColumn" maxWidth="1.7976931348623157E308" minWidth="85.0" prefWidth="85.0" sortable="false" text="Target" />
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="clearGestureDataButton" mnemonicParsing="false" onAction="#handleClearGestureData" text="Clear" />
+                            </children>
+                        </VBox>
+                    </children>
+                </TitledBorderContent>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </TitledBorder>
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</VBox>

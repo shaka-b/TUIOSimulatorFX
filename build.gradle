@@ -1,0 +1,47 @@
+
+buildscript {
+
+    dependencies {
+        classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: "8.7.0"
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    }
+}
+
+
+
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    providedCompile
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    providedCompile files('buildLib/jfxrt_1.8.0_45.jar')
+
+}
+
+sourceSets {
+    main {
+        output.resourcesDir = "build/classes/main"
+    }
+}
+
+apply plugin: 'javafx-gradle-plugin'
+
+jfx {
+    mainClass = 'de.shakab.tuio.simulator.SimulatorApp'
+    jfxMainAppJarName = 'TuioSimulator.jar'
+}
