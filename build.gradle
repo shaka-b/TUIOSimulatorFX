@@ -37,5 +37,5 @@ apply plugin: 'javafx-gradle-plugin'
 
 jfx {
     mainClass = 'de.shakab.tuio.simulator.SimulatorApp'
-    jfxMainAppJarName = 'TuioSimulator.jar'
+    jfxMainAppJarName = 'TUIOSimulatorFX.jar'
 }
