@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2017 by David Bimamisa.  All rights reserved.
+ *
+ *  Licensed under the BSD 3-Clause license.
+ *  See the file LICENSE.txt in in the project root for more information.
+ *
+ */
+
 package de.shakab.tuio.simulator;
 
 import java.net.Inet4Address;
@@ -5,11 +13,13 @@ import java.net.Inet6Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
-import java.net.UnknownHostException;
 import java.util.Enumeration;
 
 /**
- * @author David Bimamisa.
+ * Inspired by Netty's NetUtil class
+ * <a href="https://github.com/netty/netty/blob/4.1/common/src/main/java/io/netty/util/NetUtil.java">
+ *  NetUtil.java</a>
+ *
  */
 public final class NetUtil {
 
@@ -29,12 +39,11 @@ public final class NetUtil {
                 NetworkInterface intf = interfaces.nextElement();
                 System.out.println("intf=" + intf);
                 Enumeration<InetAddress> nAddresses = intf.getInetAddresses();
-
                 System.out.println("Name=" + intf.getName());
 
                 while (nAddresses.hasMoreElements()) {
                     InetAddress addr = nAddresses.nextElement();
-                    //TODO  will not work for windows where
+                    //TODO  will not work on windows
                     // wlan0 is the Microsoft Wi-Fi Direct Virtual Adapter
                     if (intf.getName().startsWith("eth") || intf.getName().startsWith("en0")
                             || intf.getName().startsWith("wlan")

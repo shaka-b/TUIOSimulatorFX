@@ -1,12 +1,19 @@
+/*
+ * Copyright (c) 2017 by David Bimamisa.  All rights reserved.
+ *
+ *  Licensed under the BSD 3-Clause license.
+ *  See the file LICENSE.txt in in the project root for more information.
+ *
+ */
+
 package de.shakab.tuio.simulator;
 
 import javafx.fxml.FXMLLoader;
-
 import java.io.IOException;
 import java.net.URL;
 
 /**
- * Created by Shaka on 10.02.2015.
+ * @author David Bimamisa
  */
 public abstract class FXMLController {
 
