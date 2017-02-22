@@ -1,9 +1,19 @@
 /*
- * Copyright (c) 2017 by David Bimamisa.  All rights reserved.
+ * A TUIO 1.1. simulator for JavaFX
+ * Copyright (C) 2017 David Bimamisa
  *
- *  Licensed under the BSD 3-Clause license.
- *  See the file LICENSE.txt in in the project root for more information.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 package de.shakab.tuio.simulator;
@@ -106,8 +116,6 @@ public class TuioFXVisualizerController extends FXMLController {
         if (cursor != null) {
             cursor.setXY(event.getSceneX(), event.getSceneY());
         }
-
-
     }
 
 

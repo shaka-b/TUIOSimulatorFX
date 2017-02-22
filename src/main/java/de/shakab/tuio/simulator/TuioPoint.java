@@ -1,13 +1,4 @@
-/*
- * Copyright (c) 2017 by David Bimamisa.  All rights reserved.
- *
- *  Licensed under the BSD 3-Clause license.
- *  See the file LICENSE.txt in in the project root for more information.
- *
- */
-
-/*
- TUIOdroid http://www.tuio.org/
+/* TUIOdroid http://www.tuio.org/
  An Open Source TUIO Tracker for Android
  (c) 2011 by Tobias Schwirten and Martin Kaltenbrunner
  
@@ -116,13 +107,5 @@ public class TuioPoint {
 	public float getAccel() {
 		return mAccel;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
